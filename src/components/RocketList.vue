@@ -2,21 +2,28 @@
     <section class="row">
         <rocket v-for="rocket in rockets" 
         :rocket="rocket"
-        :removeRocket="removeRocket"></rocket>
+        ></rocket>
     </section>
     
 </template>
 
 <script>
     import Rocket from '@/components/Rocket'
-
+    import { mapGetters }  from 'vuex'
+    
     export default{
         name:'rocketList',
 
         props:[
-        'rockets',
-        'removeRocket'
+        // 'rockets',
+        
         ],
+
+        computed:{
+            ...mapGetters({
+                rockets: 'rockets'
+            }),    
+        },
 
         components:{
             Rocket,

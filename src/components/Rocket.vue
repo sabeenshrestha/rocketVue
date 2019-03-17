@@ -10,16 +10,16 @@
 </template>
 
 <script>
+  import { mapMutations } from 'vuex';
+
     export default{
         name:'rocket',
 
-        props:[
-        'rocket',
-        'removeRocket'
-        ],
+        props:['rocket'],
 
         methods:{
-
-        }
+            ...mapMutations(['removeRocket']), 
+        },
+        
     };
 </script>

@@ -37,8 +37,6 @@
     export default{
         name: 'newRocketForm',
 
-        props: ['addRocket'],
-
         data: ()=>({
             showForm:false,
             rocket: getEmptyRocket()
@@ -47,7 +45,7 @@
 
         methods:{
             onAddRocket(){
-                this.addRocket(this.rocket)
+                this.$store.commit('addRocket',this.rocket)
                 this.rocket = getEmptyRocket()
                 this.showForm = false
             }

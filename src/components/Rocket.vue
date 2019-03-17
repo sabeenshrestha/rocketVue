@@ -4,7 +4,7 @@
       <div class="card-body">
         <h5 class="card-title">{{rocket.name}}</h5>
         <p class="card-text">{{rocket.description}}</p>
-        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        <button @click="removeRocket(rocket)" class="btn btn-danger">Delete</button>
       </div>
     </div>  
 </template>
@@ -14,7 +14,12 @@
         name:'rocket',
 
         props:[
-        'rocket'
+        'rocket',
+        'removeRocket'
         ],
+
+        methods:{
+
+        }
     };
 </script>

@@ -3,8 +3,11 @@
     <a class="navbar-brand" href="#">Rockets</a>
   </nav>
 </template>
+
 <script>
+
     export default{
         name:'navBar'
     }
+    
 </script>

@@ -33,10 +33,11 @@
                 image: ''
             }
     }
-    export default{
-        name:'newRocketForm',
 
-        props:['addRocket'],
+    export default{
+        name: 'newRocketForm',
+
+        props: ['addRocket'],
 
         data: ()=>({
             showForm:false,
@@ -48,6 +49,7 @@
             onAddRocket(){
                 this.addRocket(this.rocket)
                 this.rocket = getEmptyRocket()
+                this.showForm = false
             }
         }
     };

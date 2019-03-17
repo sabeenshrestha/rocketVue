@@ -1,7 +1,8 @@
 <template lang="html">
     <section class="row">
         <rocket v-for="rocket in rockets" 
-        :rocket="rocket"></rocket>
+        :rocket="rocket"
+        :removeRocket="removeRocket"></rocket>
     </section>
     
 </template>
@@ -13,7 +14,8 @@
         name:'rocketList',
 
         props:[
-        'rockets'
+        'rockets',
+        'removeRocket'
         ],
 
         components:{

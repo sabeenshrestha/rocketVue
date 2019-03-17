@@ -3,7 +3,10 @@
         <new-rocket-form
             :addRocket="addRocket">
         </new-rocket-form>
-        <rocketList :rockets="rockets"></rocketList>
+        <rocketList 
+            :rockets="rockets"
+            :removeRocket="removeRocket">
+            </rocketList>
         
     </section>
 </template>
@@ -28,6 +31,11 @@
         methods:{
             addRocket(rocket){
                 this.rockets.push(rocket)
+            },
+
+            removeRocket(rocket){
+                const index = this.rockets.indexOf(rocket)
+                this.rockets.splice(index,1)
             }
         },
 
